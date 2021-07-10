@@ -1,0 +1,77 @@
+:root {
+  --animation-time: 3s;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular-loading {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  position: relative;
+}
+
+.circular-loading-value {
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circular-loading__left,
+.circular-loading__right {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circular-loading__left-inner,
+.circular-loading__right-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  transform: rotate(180deg);
+  transition: transform 0.1s;
+}
+
+.circular-loading__left-inner {
+  transform-origin: 100% 50%;
+}
+
+.circular-loading__right-inner {
+  transform-origin: 0% 50%;
+}
+
+.circular-loading__left-progress,
+.circular-loading__right-progress {
+  width: 100px;
+  height: 100px;
+  border: 8px solid #005dce;
+  border-radius: 100px 0 0 100px;
+  position: absolute;
+}
+
+.circular-loading__left-progress {
+  border-radius: 100px;
+}
+
+.circular-loading__right-progress {
+  border-radius: 100px;
+  top: 0;
+  right: 0;
+}
