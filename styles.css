@@ -19,6 +19,8 @@ body {
 .circular-loading {
   width: 100px;
   height: 100px;
+  border-radius: 50px;
+  box-shadow: inset 0px 0px 0px 8px #ddd;
   display: flex;
   position: relative;
 }
